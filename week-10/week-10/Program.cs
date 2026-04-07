@@ -26,8 +26,6 @@ public class Program
             Console.WriteLine($"{m.Name} - {m.Role}");
         }
         
-        
-        
         foreach (Character member in party.GetActiveMembers())
         {
             Console.WriteLine($"Active member - {member.Name}");
@@ -45,32 +43,11 @@ public class Program
         }
         
         var avgLevel = party.Average(c => c.Level);
-        Console.WriteLine($"\nAverage Level: {avgLevel}");
+        Console.WriteLine($"Average Level of members: {avgLevel}");
 
         foreach (var e in log.GetRecentEvents(2))
         {
             Console.WriteLine($"Event {e.DescriptionOfEvent} has number of move {e.NumberOfMove}");
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
