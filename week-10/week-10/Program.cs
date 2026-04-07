@@ -35,11 +35,17 @@ public class Program
         {
             Console.WriteLine($"{m.Name} has been wounded");
         }
-        
-        var richCharacters = party.Where(c => c.GoldAmount > 30).OrderBy(c => c.Level);
+
+        var richCharacters = party.Where(c => c.GoldAmount > 30);
         foreach (var m in richCharacters)
         {
             Console.WriteLine($"{m.Name}: {m.GoldAmount} amount of gold");
+        }
+
+        var byLevel = party.OrderBy(c => c.Level);
+        foreach (var c in byLevel)
+        {
+            Console.WriteLine($"{c.Name} level - {c.Level}");
         }
         
         var avgLevel = party.Average(c => c.Level);
