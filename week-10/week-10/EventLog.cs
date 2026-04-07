@@ -27,4 +27,6 @@ public class EventLog : IEnumerable <Event>
             yield return events[i];
         }
     }
+
+    public void Add(Event e) => events.Add(e);
 }
